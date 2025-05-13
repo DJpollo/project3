@@ -247,6 +247,7 @@ private void traverseAndPrint(BTreeFile btf, long blockID) throws IOException {
                 
                         while ((line = reader.readLine()) != null) {//read from file loop
                             line = line.trim();
+                             if (line.isEmpty()) continue;
                 
                             String[] parts = line.split(",");//splitter regex form
                 
